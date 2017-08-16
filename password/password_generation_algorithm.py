@@ -13,7 +13,7 @@ def is_letter_uppercase(letter):
         letter = letter.upper()
     return letter
 
-
+#TODO: will need to make this stuff truly random. Should also include options to not use illegal chars
 def generate_password():
     new_password = ""
 
