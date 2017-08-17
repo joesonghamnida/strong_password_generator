@@ -13,13 +13,14 @@ def is_letter_uppercase(letter):
         letter = letter.upper()
     return letter
 
-#TODO: will need to make this stuff truly random. Should also include options to not use illegal chars
+
+# TODO: will need to make this stuff truly random. Should also include options to not use illegal chars
 def generate_password():
     new_password = ""
 
     i = 0
     while i < 24:
-        character_set_selector = random.randrange(0, 2)
+        character_set_selector = random.randrange(0, 3)
 
         if character_set_selector == 0:
             letter = characters[random.randint(0, 25)]
@@ -28,7 +29,7 @@ def generate_password():
         elif character_set_selector == 1:
             new_password = new_password + numbers[random.randint(0, 9)]
         else:
-            new_password + new_password + symbols[random.randint(0, 13)]
+            new_password = new_password + symbols[random.randint(0, 13)]
         i = i + 1
 
     return new_password
